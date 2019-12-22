@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script defer src="./js/all.js"></script> <!--load all styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Zeppelin</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="config-bar">
+            <div class="messages">
+                <div id="message"></div>
+            </div>
+            <div class="setting-buttons">
+                <button class="button" id="connectButton"><i class="fas fa-user"></i></button>
+                <button class="button" id="settings">Settings</button>
+            </div>
+        </div>
+        <div class="content">
+            <div id="controls" class="controls hide">
+                <input id="directionControl" type="range" min="0" max="100" value="50" step="10">
+                <input id="speedControl" type="range" min="0" max="100" value="50" step="10">
+            </div>
+        </div>
+        <div class="footer">Zeppelin app 2019.</div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        app.initialize();
+    </script>
+</body>
+
+</html>
