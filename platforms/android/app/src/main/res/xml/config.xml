@@ -12,10 +12,11 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="www/assets/zeppelin.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="fullscreen" value="false" />
     <preference name="Orientation" value="sensorLandscape" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="webviewbounce" value="true" />
-    <preference name="BackgroundColor" value="#AF803D" />
+    <preference name="BackgroundColor" value="#371609" />
 </widget>

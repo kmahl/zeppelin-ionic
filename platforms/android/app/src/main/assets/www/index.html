@@ -5,34 +5,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport"
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <script defer src="./js/all.js"></script> <!--load all styles -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script defer src="./js/all.js"></script>
+    <!--load all styles -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Zeppelin</title>
 </head>
 
+
 <body>
     <div class="app">
         <div class="config-bar">
-            <div class="messages">
-                <div id="message"></div>
+            <div class="bar"></div>
+            <div class="logo">
+                <img src="./assets/zeppelin.png">
             </div>
             <div class="setting-buttons">
-                <button class="button" id="connectButton"><i class="fas fa-user"></i></button>
-                <button class="button" id="settings">Settings</button>
+                <button class="button" id="connectButton"><img src="./assets/on.png"></img></button>
+                <button class="button" id="settings"><img src="./assets/config.png"></img></button>
             </div>
         </div>
-        <div class="content">
-            <div id="controls" class="controls hide">
-                <input id="directionControl" type="range" min="0" max="100" value="50" step="10">
-                <input id="speedControl" type="range" min="0" max="100" value="50" step="10">
+        <div id="controls" class="controls">
+            <div class="control-container">
+                <div id="base">
+                    <div class="back">
+                        <img src="./assets/bg-joystick.png">
+                    </div>
+                    <div id="joystick">
+                    </div>
+                </div>
+            </div>
+            <div class="control-container">
+                <input class="control vertical" id="speedControl" type="range" min="0" max="100" value="50" step="10" list="speedList">
+                <datalist class="list vertical-list" id="speedList">
+                        <option>&#x00416</option>
+                        <option>&#x02965</option>
+                        <option>&#x000D8</option>
+                        <option>&#x02963</option>
+                        <option>&#x003A9</option>
+                    </datalist>
             </div>
         </div>
-        <div class="footer">Zeppelin app 2019.</div>
+        <div class="footer-content">
+            <div class="footer">
+                <span>
+                Zeppelin app 2019.
+            </span>
+                <div id="test"></div>
+                <div class="messages">
+                    <div id="message"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
     <script>
         app.initialize();
     </script>
